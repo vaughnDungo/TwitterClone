@@ -25,7 +25,7 @@ Follow these steps to set up and run the Twitter Clone project:
 
    - Open a terminal and navigate to the cloned repository.
    - Install the API dependencies by running the command:
-o     ```
+     ```
      npm run init-api
      ```
    - Install the UI dependencies by running the command:
@@ -39,8 +39,8 @@ o     ```
      ```
      npm run start-api
      ```
-   - Visit `http://localhost:3000` in your web browser to check if the API is up and running.
-   - Visit `http://localhost:3000/docs` in your web browser to see the documentation of the API.
+   - Visit `http://localhost:3000/api` in your web browser to check if the API is up and running.
+   - Visit `http://localhost:3000/api/docs` in your web browser to see the documentation of the API.
 
 5. **Run the UI**:
 
@@ -84,7 +84,7 @@ The JWT_KEY is used to generate the tokens and make sure that the tokens generat
 
 1. To setup the JWT_KEY environment variable, you would first need to generate a secret key. You may refer to [this](https://dev.to/tkirwa/generate-a-random-jwt-secret-key-39j4) tutorial for generating a secret key
    - Once generated, your private key may look something like this `ddcb75b4f402f240234eec4bf175fa9e8c15aea5...`
-2. Once you have created a secret key, you need to add your private key as an environment variable. The key must be `JWT_KEY` and the value is your private key.
+2. Once you have created a secret key, you need to add your private key as an environment variable. The name of the key must be `JWT_KEY` and the value is your private key.
    - You may refer to [this](https://docs.netlify.com/environment-variables/get-started/#site-environment-variables) documentation for a tutorial on how to set environment variables in netlify
 
 Happy coding! 🚀🐦
