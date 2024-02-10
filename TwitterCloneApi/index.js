@@ -22,7 +22,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.send("Hello world");
+  res.send("Hello world. The API is up and running");
 });
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/posts", postsRoutes);
