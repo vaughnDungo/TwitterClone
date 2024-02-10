@@ -22,7 +22,7 @@ app.use(
   swaggerUi.setup(YAML.load("./docs/openapi.yaml"))
 );
 
-app.get("/", (req, res) => {
+app.get("/api/", (req, res) => {
   res.send("Hello world. The API is up and running");
 });
 app.use("/api/v1/auth", authRoutes);
