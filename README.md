@@ -40,6 +40,7 @@ Follow these steps to set up and run the Twitter Clone project:
      npm run start-api
      ```
    - Visit `http://localhost:3000` in your web browser to check if the API is up and running.
+   - Visit `http://localhost:3000/docs` in your web browser to see the documentation of the API.
 
 5. **Run the UI**:
 
@@ -48,7 +49,7 @@ Follow these steps to set up and run the Twitter Clone project:
      ```
      npm run start-ui
      ```
-   - Visit `http://127.0.0.1` in your web browser to see if the UI is working.
+   - Visit `http://127.0.0.1:8080` in your web browser to see if the UI is working.
 
 6. **Start Developing**:
    - Begin working on the UI in the `TwitterCloneUi` folder.
