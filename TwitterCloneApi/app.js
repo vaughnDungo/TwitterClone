@@ -16,11 +16,11 @@ dotenv.config();
 
 app.use(cors());
 app.use(express.json());
-app.use(
-  "/docs",
-  swaggerUi.serve,
-  swaggerUi.setup(YAML.load("./docs/openapi.yaml"))
-);
+// app.use(
+//   "/api/docs",
+//   swaggerUi.serve,
+//   swaggerUi.setup(YAML.load("./docs/openapi.yaml"))
+// );
 
 app.get("/api/", (req, res) => {
   res.send("Hello world. The API is up and running");
