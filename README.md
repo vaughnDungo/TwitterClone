@@ -25,7 +25,7 @@ Follow these steps to set up and run the Twitter Clone project:
 
    - Open a terminal and navigate to the cloned repository.
    - Install the API dependencies by running the command:
-o     ```
+     ```
      npm run init-api
      ```
    - Install the UI dependencies by running the command:
