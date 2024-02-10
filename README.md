@@ -1,5 +1,15 @@
 # Twitter Clone
 
+## Repository Owner
+
+- Each group must assign one repository owner
+- The repository owner must fork this repository. Only the repository owner should fork the repository
+  - This could be done by clicking the "Fork" button on the top right.
+- The repository owner must invite their goupmates as collaborators in their fork
+  - This could be done by going to Settings>Collaborators>Add people
+- The group must use the fork to collaborate on their project. They must commit and push their code in their forks.
+- The group must submit the link of the repository of the repository owner in the submission bin
+
 ## Getting Started
 
 Follow these steps to set up and run the Twitter Clone project:
@@ -8,8 +18,7 @@ Follow these steps to set up and run the Twitter Clone project:
    Make sure you have Node.js installed on your system. If not, download and install it from the official website.
 
 2. **Fork and Clone the Repository**:
-
-   - Create a fork of this repository by clicking the "Fork" button on the top right.
+ 
    - Clone your forked repository to your local machine using Git.
 
 3. **Install Dependencies**:
