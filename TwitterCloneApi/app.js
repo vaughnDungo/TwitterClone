@@ -13,6 +13,7 @@ import followersRoutes from "./routes/FollowersRoutes.js";
 const app = express();
 
 dotenv.config();
+
 app.use(cors());
 app.use(express.json());
 app.use(
@@ -28,7 +29,4 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/posts", postsRoutes);
 app.use("/api/v1/users", followersRoutes);
 
-const port = 3000;
-app.listen(port, () => {
-  console.log(`Application started listening on port ${port}`);
-});
+export default app;
