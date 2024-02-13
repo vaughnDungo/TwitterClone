@@ -17,7 +17,7 @@ body {
     padding: 0 40px;
 
     display: flex;
-    background-image: url(./sources/weezer.bg.gif);
+    background-image: url(./sources/background.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
