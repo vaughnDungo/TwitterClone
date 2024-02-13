@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weezer - Timeline</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="timelineStyles.css"/>
+
+</head>
+<body>
+
+    <!--SIDEBAR MENU-->
+    <div class="sidebar">
+    
+        <div class="side-header">
+            <img id="weezer" src="./sources/weezerlogo.png"/>
+            <h1 class="logo">Weezer</h1>
+        </div>
+
+        <div class="sidebarOpt active">
+            <span class="material-symbols-outlined">
+                home
+            </span>
+            <a href="timeline.html"><h2>Home</h2></a>
+        </div>
+
+        <div class="sidebarOpt">
+            <span class="material-symbols-outlined">
+                person
+            </span>
+            <a href="profile.html"><h2>Profile</h2></a>
+        </div>
+
+        <div class="sidebarOpt">
+            <span class="material-symbols-outlined">
+                group
+            </span>
+            <a href="following.html"><h2>Following</h2></a>
+        </div>
+
+        <div class="sidebarOpt">
+            <span class="material-symbols-outlined">
+                logout
+            </span>
+            <h2 onclick="logOut(event)">Log Out</h2>
+        </div>
+
+        <div id="profile-link-container">
+            <span class="material-symbols-outlined">
+                account_circle
+            </span>
+            <h2>Username</h2>
+        </div>
+
+    </div>
+    <!--SIDEBAR MENU-->
+
+    <!--TIMELINE FEED-->
+    
+    <div class="feed">
+
+        <div class="feed-container">
+    
+            <!--POST FIELD-->
+            <div class="post-field">
+                <form>
+                    <div class="post-field-input">
+                        <textarea id="text-area" maxlength="280" placeholder="What's Happening?"></textarea>
+                        <button type="submit" id="post-button" onclick="postTextAreaValueToAPI(event)">Post</button>
+                    </div>
+                </form>
+            </div>
+            <!--POST FIELD-->
+
+        </div>
+
+        <div class="post-main-container">
+            
+            <!--POST TIMELINE-->
+        <div class="post-container">
+            
+            <div class="post-avatar">
+                <span class="material-symbols-outlined"> account_circle </span>
+            </div>
+
+            <div class="post-body">
+                <div class="post-header">
+                    <div class="post-header-text">
+                        <h3>
+                            Username
+                        </h3>
+                    </div>
+                    <div class="post-header-description">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                        Aut maxime dignissimos enim ex! Blanditiis reiciendis, est quam repellat maxime incidunt nemo,<br>
+                        culpa voluptatibus dolorum non voluptate perferendis autem at eos?</p>
+                    </div>
+                </div>
+
+                <div class="post-footer">
+                    <span class="material-symbols-outlined"> favorite </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="post-container">
+            
+            <div class="post-avatar">
+                <span class="material-symbols-outlined"> account_circle </span>
+            </div>
+
+            <div class="post-body">
+                <div class="post-header">
+                    <div class="post-header-text">
+                        <h3>
+                            Username
+                        </h3>
+                    </div>
+                    <div class="post-header-description">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                        Aut maxime dignissimos enim ex! Blanditiis reiciendis, est quam repellat maxime incidunt nemo,<br>
+                        culpa voluptatibus dolorum non voluptate perferendis autem at eos?</p>
+                    </div>
+                </div>
+
+                <div class="post-footer">
+                    <span class="material-symbols-outlined"> favorite </span>
+                </div>
+            </div>
+        </div>
+
+        <!--POST TIMELINE-->
+
+        </div>
+
+    </div>
+
+    <!--TIMELINE FEED-->
+
+    <!--WIDGET MENU-->
+    <div class="widgets-container">
+        <div class="widget-header">
+            <h2>What's Happening?</h2>
+        </div>
+        <div class="widget-text">
+            <h2>#WSF</h2>
+        </div>
+        <div class="widget-text">
+            <h2>#MMCL2024</h2>
+        </div>
+        <div class="widget-text">
+            <h2>#MMCLParkingLot!?</h2>
+        </div>
+        <div class="widget-text">
+            <h2>#MaliwanagPasaIlao?</h2>
+        </div>
+        <div class="widget-text">
+            <h2>#Varda</h2>
+        </div>
+        <div class="widget-text">
+            <h2>#MMCLCASWEEK</h2>
+        </div>
+    </div>
+    <!--WIDGET MENU-->
+
+    <script src="timeline.js"></script>
+
+</body>
+</html>
