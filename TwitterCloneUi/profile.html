@@ -100,7 +100,7 @@
       <button class="following" id="following_btn">FOLLOWING</button>
       <a href="following.html" class="following">FOLLOWING</a>
 
-      <button class="logout" id="logout_btn">LOGOUT</button>
+      <button class="logout" id="logout_btn" onclick="logout()">LOGOUT</button>
       <!--Siguro add API na here...-->
 
       <!--End NAV-->
@@ -216,6 +216,15 @@
       <div class="profile-page-child6"></div>
       <div class="username6">@username</div>
       <button class="like5" id="like_btn">Like</button>
+      <script>
+        function logout() {
+        localStorage.removeItem('authToken');
+        localStorage.removeItem('currentUser');
+      
+        window.location.href = 'login-index.html';
+      }
+      </script>
+      
     </div>
   </body>
 </html>

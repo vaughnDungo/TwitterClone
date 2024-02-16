@@ -77,7 +77,7 @@
       <button class="following" id="following_btn">FOLLOWING</button>
       <a href="following.html" class="following">FOLLOWING</a>
 
-      <button class="logout" id="logout_btn">LOGOUT</button>
+      <button class="logout" id="logout_btn" onclick="logout()">LOGOUT</button>
 
       
       <div class="follow6">Follow</div>
@@ -125,5 +125,13 @@
 
 
     </div>
+    <script>
+      function logout() {
+      localStorage.removeItem('authToken');
+      localStorage.removeItem('currentUser');
+    
+      window.location.href = 'login-index.html';
+    }
+    </script>
   </body>
 </html>

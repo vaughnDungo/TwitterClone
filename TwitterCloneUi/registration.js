@@ -14,31 +14,29 @@ signupForm.addEventListener('submit', function(event) {
       console.log('register');
     }
 });
+async function regis(username, password) {
+  try {
+    const response = await fetch("http://localhost:3000/api/v1/auth/register", {
+      method: "POST",
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password })
+    });
 
-//Register
-async function regis(username, password){
-    try{
-      const req = await fetch("http://localhost:3000/api/v1/auth/register", {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          "username": username,
-          "password": password
-        })
-      });
-      if (req.ok){
-        const reqData = await req.json();
-        console.log("User created: ", reqData);
-        window.location.href='login-index.html';
+    const contentType = response.headers.get("content-type");
+    if (contentType && contentType.includes("application/json")) {
+      if (response.ok) {
+        const data = await response.json();
+        console.log("User created:", data);
+        window.location.href = 'login-index.html';
+      } else {
+        const error = await response.text();
+        console.error('Registration error:', error);
       }
-      else{
-        const reqError = await req.json();
-        throw(reqError);
-      }
+    } else {
+      const message = await response.text();
+      console.log(message);
     }
-    catch(reqError){
-      console.error('Error occurred during registration: ', reqError);
-    }
+  } catch (error) {
+    console.error('Error occurred during registration:', error);
   }
+}
