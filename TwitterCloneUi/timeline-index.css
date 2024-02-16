@@ -1,0 +1,527 @@
+.background-1-icon {
+    position: absolute;
+    top: 0;
+    left: -11px;
+    width: 2038px;
+    height: 2128px;
+    object-fit: cover;
+  }
+  .timeline-page-child {
+    position: absolute;
+    top: 27px;
+    left: 368px;
+    border-radius: var(--br-6xl);
+    width: 1048px;
+    height: 1991px;
+  }
+  .lorem-ipsum-dolor {
+    margin: 0;
+  }
+  .lorem-ipsum-dolor-container {
+    position: absolute;
+    top: 1721px;
+    left: 598px;
+    font-weight: 200;
+  }
+  .timeline-page-item {
+    position: absolute;
+    top: 1672px;
+    left: 512px;
+    border-radius: 50%;
+    background-color: var(--color-darkgray-100);
+    width: 73px;
+    height: 69px;
+  }
+  .profile-name {
+    position: absolute;
+    top: 1696px;
+    left: 598px;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    display: inline-block;
+    width: 227px;
+  }
+  .like,
+  .username {
+    position: absolute;
+    top: 1696px;
+    left: 702px;
+    font-weight: 100;
+  }
+  .like {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    top: 1736px;
+    left: 1064px;
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    color: var(--color-black);
+    text-align: center;
+    display: inline-block;
+  }
+  .like1:hover,
+  .like2:hover,
+  .like:hover {
+    color: var(--color-red);
+  }
+  .lorem-ipsum-dolor-container1 {
+    position: absolute;
+    top: 1369px;
+    left: 598px;
+    font-weight: 200;
+  }
+  .timeline-page-inner {
+    position: absolute;
+    top: 1320px;
+    left: 512px;
+    border-radius: 50%;
+    background-color: var(--color-darkgray-100);
+    width: 73px;
+    height: 69px;
+  }
+  .profile-name1 {
+    position: absolute;
+    top: 1344px;
+    left: 598px;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    display: inline-block;
+    width: 227px;
+  }
+  .like1,
+  .username1 {
+    position: absolute;
+    top: 1344px;
+    left: 702px;
+    font-weight: 100;
+  }
+  .like1 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    top: 1384px;
+    left: 1064px;
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    color: var(--color-black);
+    text-align: center;
+    display: inline-block;
+  }
+  .lorem-ipsum-dolor-container2 {
+    position: absolute;
+    top: 1545px;
+    left: 598px;
+    font-weight: 200;
+  }
+  .ellipse-div {
+    position: absolute;
+    top: 1496px;
+    left: 512px;
+    border-radius: 50%;
+    background-color: var(--color-darkgray-100);
+    width: 73px;
+    height: 69px;
+  }
+  .profile-name2 {
+    position: absolute;
+    top: 1520px;
+    left: 598px;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    display: inline-block;
+    width: 227px;
+  }
+  .like2,
+  .username2 {
+    position: absolute;
+    top: 1520px;
+    left: 702px;
+    font-weight: 100;
+  }
+  .like2 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    top: 1560px;
+    left: 1064px;
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    color: var(--color-black);
+    text-align: center;
+    display: inline-block;
+  }
+  .rectangle-div,
+  .rectangle-icon {
+    position: absolute;
+    top: 311px;
+    left: 59px;
+    border-radius: var(--br-6xl);
+    width: 239px;
+    height: 344px;
+  }
+  .rectangle-div {
+    top: 66px;
+    left: 398px;
+    background-color: #d9d9d9;
+    width: 982px;
+    height: 299px;
+  }
+  .write-something {
+    border: 0;
+    outline: 0;
+    display: inline-block;
+    font-weight: 300;
+    font-family: var(--font-poppins);
+    font-size: var(--font-size-xl);
+    background-color: transparent;
+    position: absolute;
+    top: 100px;
+    left: 425px;
+    font-style: italic;
+    color: var(--color-black);
+    text-align: left;
+    width: 925px;
+    height: 194px;
+  }
+  .write-something:hover {
+    color: #f200ff;
+  }
+  .weezerlogo-1-icon {
+    position: absolute;
+    top: 69px;
+    left: 76px;
+    width: 208px;
+    height: 201px;
+    object-fit: cover;
+  }
+  .lorem-ipsum-dolor-container3 {
+    position: absolute;
+    top: 484px;
+    left: 598px;
+    font-weight: 200;
+  }
+  .timeline-page-child1 {
+    position: absolute;
+    top: 435px;
+    left: 512px;
+    border-radius: 50%;
+    background-color: var(--color-darkgray-100);
+    width: 73px;
+    height: 69px;
+  }
+  .profile-name3,
+  .username3 {
+    position: absolute;
+    top: 459px;
+  }
+  .profile-name3 {
+    left: 598px;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    display: inline-block;
+    width: 227px;
+  }
+  .username3 {
+    left: 702px;
+    font-weight: 100;
+  }
+  .lorem-ipsum-dolor-container4 {
+    position: absolute;
+    top: 841px;
+    left: 604px;
+    font-weight: 200;
+  }
+  .timeline-page-child2 {
+    position: absolute;
+    top: 792px;
+    left: 518px;
+    border-radius: 50%;
+    background-color: var(--color-darkgray-100);
+    width: 73px;
+    height: 69px;
+  }
+  .profile-name4,
+  .username4 {
+    position: absolute;
+    top: 816px;
+  }
+  .profile-name4 {
+    left: 604px;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    display: inline-block;
+    width: 227px;
+  }
+  .username4 {
+    left: 708px;
+    font-weight: 100;
+  }
+  .group-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: var(--br-6xl);
+    background-color: #fa16ff;
+    width: 97px;
+    height: 48px;
+  }
+  .group-child:hover {
+    background-color: #ababab;
+  }
+  .weez {
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: var(--font-poppins);
+    color: var(--color-black);
+    text-align: left;
+    display: inline-block;
+    width: 200.2px;
+  }
+  .message-05-icon {
+    position: absolute;
+    top: 12px;
+    left: 19px;
+    width: 21.2px;
+    height: 24px;
+    overflow: hidden;
+  }
+  .rectangle-parent {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 308px;
+    left: 1266px;
+    width: 240.2px;
+    height: 48px;
+  }
+  .line-div {
+    position: absolute;
+    top: 419.5px;
+    left: 367.5px;
+    border-top: 1px solid #cdcdcd;
+    box-sizing: border-box;
+    width: 1049px;
+    height: 1px;
+  }
+  .following,
+  .home,
+  .like3,
+  .logout,
+  .profile {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 332px;
+    left: 126px;
+    font-size: var(--font-size-17xl);
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    color: var(--color-black);
+    text-align: center;
+    display: inline-block;
+  }
+  .following:hover,
+  .home:hover,
+  .logout:hover,
+  .profile:hover {
+    color: var(--color-mediumorchid);
+  }
+  .following,
+  .like3,
+  .logout,
+  .profile {
+    top: 415px;
+    left: 109px;
+  }
+  .following,
+  .like3,
+  .logout {
+    top: 502px;
+    left: 74px;
+  }
+  .like3,
+  .logout {
+    top: 585px;
+    left: 101px;
+  }
+  .like3 {
+    top: 496px;
+    left: 1064px;
+    font-size: var(--font-size-xl);
+  }
+  .like3:hover,
+  .like4:hover,
+  .like5:hover,
+  .like6:hover,
+  .like7:hover {
+    color: var(--color-red);
+  }
+  .lorem-ipsum-dolor-container5 {
+    position: absolute;
+    top: 655px;
+    left: 598px;
+    font-weight: 200;
+  }
+  .timeline-page-child3 {
+    position: absolute;
+    top: 606px;
+    left: 512px;
+    border-radius: 50%;
+    background-color: var(--color-darkgray-100);
+    width: 73px;
+    height: 69px;
+  }
+  .profile-name5 {
+    position: absolute;
+    top: 630px;
+    left: 598px;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    display: inline-block;
+    width: 227px;
+  }
+  .like4,
+  .like5,
+  .username5 {
+    position: absolute;
+    top: 630px;
+    left: 702px;
+    font-weight: 100;
+  }
+  .like4,
+  .like5 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    top: 667px;
+    left: 1064px;
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    color: var(--color-black);
+    text-align: center;
+    display: inline-block;
+  }
+  .like5 {
+    top: 856px;
+    left: 1070px;
+  }
+  .lorem-ipsum-dolor-container6 {
+    position: absolute;
+    top: 1017px;
+    left: 604px;
+    font-weight: 200;
+  }
+  .timeline-page-child4 {
+    position: absolute;
+    top: 968px;
+    left: 518px;
+    border-radius: 50%;
+    background-color: var(--color-darkgray-100);
+    width: 73px;
+    height: 69px;
+  }
+  .profile-name6 {
+    position: absolute;
+    top: 992px;
+    left: 604px;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    display: inline-block;
+    width: 227px;
+  }
+  .like6,
+  .username6 {
+    position: absolute;
+    top: 992px;
+    left: 708px;
+    font-weight: 100;
+  }
+  .like6 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    top: 1032px;
+    left: 1070px;
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    color: var(--color-black);
+    text-align: center;
+    display: inline-block;
+  }
+  .lorem-ipsum-dolor-container7 {
+    position: absolute;
+    top: 1193px;
+    left: 604px;
+    font-weight: 200;
+  }
+  .timeline-page-child5 {
+    position: absolute;
+    top: 1144px;
+    left: 518px;
+    border-radius: 50%;
+    background-color: var(--color-darkgray-100);
+    width: 73px;
+    height: 69px;
+  }
+  .profile-name7,
+  .username7 {
+    position: absolute;
+    top: 1168px;
+  }
+  .profile-name7 {
+    left: 604px;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    display: inline-block;
+    width: 227px;
+  }
+  .username7 {
+    left: 708px;
+    font-weight: 100;
+  }
+  .like7,
+  .timeline-page {
+    color: var(--color-black);
+    font-family: var(--font-poppins);
+  }
+  .like7 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 1208px;
+    left: 1070px;
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+  }
+  .timeline-page {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    height: 2051px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-3xs);
+  }
+  

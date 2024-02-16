@@ -1,0 +1,394 @@
+.background-1-icon {
+  position: absolute;
+  top: 0;
+  left: -11px;
+  width: 2038px;
+  height: 2051px;
+  object-fit: cover;
+}
+.profile-page-child,
+.profile-page-inner,
+.profile-page-item {
+  position: absolute;
+  top: 27px;
+  left: 368px;
+  border-radius: var(--br-6xl);
+  width: 1048px;
+  height: 1991px;
+}
+.profile-page-inner,
+.profile-page-item {
+  top: 311px;
+  left: 59px;
+  width: 239px;
+  height: 344px;
+}
+.profile-page-inner {
+  top: 66px;
+  left: 398px;
+  background-color: #d9d9d9;
+  width: 982px;
+  height: 299px;
+}
+.ellipse-div {
+  position: absolute;
+  top: 292px;
+  left: 385px;
+  border-radius: 50%;
+  background-color: var(--color-darkgray);
+  width: 239px;
+  height: 237px;
+}
+.weezerlogo-1-icon {
+  position: absolute;
+  top: 69px;
+  left: 76px;
+  width: 208px;
+  height: 201px;
+  object-fit: cover;
+}
+.lorem-ipsum-dolor {
+  margin: 0;
+}
+.lorem-ipsum-dolor-container {
+  position: absolute;
+  top: 644px;
+  left: 604px;
+  font-weight: 200;
+}
+.profile-name,
+.username {
+  position: absolute;
+  left: 637px;
+}
+.profile-name {
+  top: 365px;
+  font-size: 32px;
+  font-weight: 500;
+  display: inline-block;
+  width: 227px;
+}
+.username {
+  top: 407px;
+  font-size: var(--font-size-xl);
+  font-weight: 100;
+}
+.profile-page-child1 {
+  position: absolute;
+  top: 595px;
+  left: 518px;
+  border-radius: 50%;
+  background-color: var(--color-darkgray);
+  width: 73px;
+  height: 69px;
+}
+.profile-name1,
+.username1 {
+  position: absolute;
+  top: 619px;
+}
+.profile-name1 {
+  left: 604px;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  display: inline-block;
+  width: 227px;
+}
+.username1 {
+  left: 708px;
+  font-weight: 100;
+}
+.lorem-ipsum-dolor-container1 {
+  position: absolute;
+  top: 841px;
+  left: 604px;
+  font-weight: 200;
+}
+.profile-page-child2 {
+  position: absolute;
+  top: 792px;
+  left: 518px;
+  border-radius: 50%;
+  background-color: var(--color-darkgray);
+  width: 73px;
+  height: 69px;
+}
+.profile-name2,
+.profile-name3 {
+  position: absolute;
+  top: 816px;
+  left: 604px;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  display: inline-block;
+  width: 227px;
+}
+.profile-name3 {
+  top: 1037px;
+}
+.username2 {
+  position: absolute;
+  top: 816px;
+  left: 708px;
+  font-weight: 100;
+}
+.line-div {
+  position: absolute;
+  top: 540.5px;
+  left: 367.5px;
+  border-top: 1px solid #cdcdcd;
+  box-sizing: border-box;
+  width: 1049px;
+  height: 1px;
+}
+.following,
+.home,
+.like,
+.like1,
+.logout,
+.profile {
+  
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 332px;
+  left: 126px;
+  font-size: var(--font-size-17xl);
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  color: var(--color-black);
+  text-align: center;
+  display: inline-block;
+}
+.following:hover,
+.home:hover,
+.logout:hover,
+.profile:hover {
+  color: var(--color-mediumorchid);
+}
+.following,
+.like,
+.like1,
+.logout,
+.profile {
+  top: 415px;
+  left: 109px;
+}
+.following,
+.like,
+.like1,
+.logout {
+  top: 502px;
+  left: 74px;
+}
+.like,
+.like1,
+.logout {
+  top: 585px;
+  left: 101px;
+}
+.like,
+.like1 {
+  top: 656px;
+  left: 1070px;
+  font-size: var(--font-size-xl);
+}
+.like1:hover,
+.like2:hover,
+.like3:hover,
+.like4:hover,
+.like5:hover,
+.like:hover {
+  color: var(--color-red);
+}
+.like1 {
+  top: 856px;
+}
+.lorem-ipsum-dolor-container2 {
+  position: absolute;
+  top: 1062px;
+  left: 604px;
+  font-weight: 200;
+}
+.profile-page-child3 {
+  position: absolute;
+  top: 1013px;
+  left: 518px;
+  border-radius: 50%;
+  background-color: var(--color-darkgray);
+  width: 73px;
+  height: 69px;
+}
+.username3 {
+  position: absolute;
+  top: 1037px;
+  left: 708px;
+  font-weight: 100;
+}
+.like2,
+.profile-name4 {
+  position: absolute;
+  display: inline-block;
+}
+.like2 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 1077px;
+  left: 1070px;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  color: var(--color-black);
+  text-align: center;
+}
+.profile-name4 {
+  top: 1258px;
+  left: 604px;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  width: 227px;
+}
+.lorem-ipsum-dolor-container3 {
+  position: absolute;
+  top: 1283px;
+  left: 604px;
+  font-weight: 200;
+}
+.profile-page-child4 {
+  position: absolute;
+  top: 1234px;
+  left: 518px;
+  border-radius: 50%;
+  background-color: var(--color-darkgray);
+  width: 73px;
+  height: 69px;
+}
+.username4 {
+  position: absolute;
+  top: 1258px;
+  left: 708px;
+  font-weight: 100;
+}
+.like3,
+.profile-name5 {
+  position: absolute;
+  display: inline-block;
+}
+.like3 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 1298px;
+  left: 1070px;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  color: var(--color-black);
+  text-align: center;
+}
+.profile-name5 {
+  top: 1479px;
+  left: 604px;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  width: 227px;
+}
+.lorem-ipsum-dolor-container4 {
+  position: absolute;
+  top: 1504px;
+  left: 604px;
+  font-weight: 200;
+}
+.profile-page-child5 {
+  position: absolute;
+  top: 1455px;
+  left: 518px;
+  border-radius: 50%;
+  background-color: var(--color-darkgray);
+  width: 73px;
+  height: 69px;
+}
+.username5 {
+  position: absolute;
+  top: 1479px;
+  left: 708px;
+  font-weight: 100;
+}
+.like4,
+.profile-name6 {
+  position: absolute;
+  display: inline-block;
+}
+.like4 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 1519px;
+  left: 1070px;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  color: var(--color-black);
+  text-align: center;
+}
+.profile-name6 {
+  top: 1700px;
+  left: 604px;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  width: 227px;
+}
+.lorem-ipsum-dolor-container5 {
+  position: absolute;
+  top: 1725px;
+  left: 604px;
+  font-weight: 200;
+}
+.profile-page-child6 {
+  position: absolute;
+  top: 1676px;
+  left: 518px;
+  border-radius: 50%;
+  background-color: var(--color-darkgray);
+  width: 73px;
+  height: 69px;
+}
+.username6 {
+  position: absolute;
+  top: 1700px;
+  left: 708px;
+  font-weight: 100;
+}
+.like5,
+.profile-page {
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+.like5 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 1740px;
+  left: 1070px;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+}
+.profile-page {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  height: 2051px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-3xs);
+}

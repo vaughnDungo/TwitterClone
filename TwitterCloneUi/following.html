@@ -1,223 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./following-global.css" />
+    <link rel="stylesheet" href="./following-index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;600&display=swap"
+    />
     <title>Weezer - Following</title>
+  </head>
+  <body>
+    <div class="following-page">
+      <img
+        class="background-1-icon"
+        alt=""
+        src="./public/background-1@2x.png"
+      />
 
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="followingStyles.css"/>
-    <script src="following.js"></script>
-
-</head>
-<body>
-
-    <!--SIDEBAR MENU-->
-    <div class="sidebar">
-        <div class="side-header">
-            <img id="weezer" src="./sources/weezerlogo.png"/>
-            <h1 class="logo">Weezer</h1>
-        </div>
-
-        <div class="sidebarOpt">
-            <span class="material-symbols-outlined">
-                home
-            </span>
-            <a href="timeline.html"><h2>Home</h2></a>
-        </div>
+      <img class="following-page-child" alt="" src="./public/rectangle-2.svg" />
 
 
-        <div class="sidebarOpt">
-            <span class="material-symbols-outlined">
-                person
-            </span>
-            <a href="profile.html"><h2>Profile</h2></a>
-        </div>
+      <!--Follow Buttons-->
+      <div class="following-page-item"></div>
 
-        <div class="sidebarOpt">
-            <span class="material-symbols-outlined">
-                group
-            </span>
-            <a href="following.html"><h2>Following</h2></a>
-            
-        </div>
+      <div class="profile-name">PROFILE NAME</div>
+      <div class="username">@username</div>
+      <button class="follow" id="follow_btn">(+) Follow</button>
+      <div class="following-page-inner"></div>
 
-        <div class="sidebarOpt">
-            <span class="material-symbols-outlined">
-                logout
-            </span>
-            <a href="login.html"><h2>Log Out</h2></a>
-            
-        </div>
+      <div class="profile-name1">PROFILE NAME</div>
+      <div class="username1">@username</div>
+      <button class="follow1" id="follow_btn">(+) Follow</button>
+      <div class="ellipse-div"></div>
 
-        <div id="profile-link-container">
-            <span class="material-symbols-outlined">
-                account_circle
-            </span>
-            <h2>Username</h2>
-        </div>
+      <div class="profile-name2">PROFILE NAME</div>
+      <div class="username2">@username</div>
+      <button class="follow2" id="follow_btn">(+) Follow</button>
+      <div class="following-page-child1"></div>
+
+      <div class="profile-name3">PROFILE NAME</div>
+      <div class="username3">@username</div>
+      <button class="follow3" id="follow_btn">(+) Follow</button>
+      <div class="following-page-child2"></div>
+
+      <div class="profile-name4">PROFILE NAME</div>
+      <div class="username4">@username</div>
+      <button class="follow4" id="follow_btn">(+) Follow</button>
+      <div class="following-page-child3"></div>
+
+      <div class="profile-name5">PROFILE NAME</div>
+      <div class="username5">@username</div>
+      <button class="follow5" id="follow_btn">(+) Follow</button>
+      <img class="rectangle-icon" alt="" src="./public/rectangle-1.svg" />
+
+      <img
+        class="weezerlogo-1-icon"
+        alt=""
+        src="./public/weezerlogo-1@2x.png"
+      />
+
+      <div class="following-page-child4"></div>
+      <div class="profile-name6">PROFILE NAME</div>     
+      <div class="username6">@username</div>
+
+
+      <!--NAV BAR-->
+      <button class="home" id="home_btn">HOME</button>
+      <a href="timeline.html" class="home">HOME</a>
+      
+      <button class="profile" id="profile_btn">PROFILE</button>
+      <a href="profile.html" class="profile">PROFILE</a>
+
+      <button class="following" id="following_btn">FOLLOWING</button>
+      <a href="following.html" class="following">FOLLOWING</a>
+
+      <button class="logout" id="logout_btn">LOGOUT</button>
+
+      
+      <div class="follow6">Follow</div>
+      <button class="follow7" id="follow_btn">(+) Follow</button>
+      <div class="following-page-child5"></div>
+
+      <div class="profile-name7">PROFILE NAME</div>
+      <div class="username7">@username</div>
+      <button class="follow8" id="follow_btn">(+) Follow</button>
+      <div class="following-page-child6"></div>
+
+      <div class="profile-name8">PROFILE NAME</div>
+      <div class="username8">@username</div>
+      <button class="follow9" id="follow_btn">(+) Follow</button>
+      <div class="following-page-child7"></div>
+
+      <div class="profile-name9">PROFILE NAME</div>
+      <div class="username9">@username</div>
+      <button class="follow10" id="follow_btn">(+) Follow</button>
+      <div class="following-page-child8"></div>
+
+      <div class="profile-name10">PROFILE NAME</div>
+      <div class="username10">@username</div>
+      <button class="follow11" id="follow_btn">(+) Follow</button>
+      <div class="following-page-child9"></div>
+
+      <div class="profile-name11">PROFILE NAME</div>
+      <div class="username11">@username</div>
+      <button class="follow12" id="follow_btn">(+) Follow</button>
+      <div class="following-page-child10"></div>
+
+      <div class="profile-name12">PROFILE NAME</div>
+      <div class="username12">@username</div>
+      <button class="follow13" id="follow_btn">(+) Follow</button>
+      <div class="following-page-child11"></div>
+
+      <div class="profile-name13">PROFILE NAME</div>
+      <div class="username13">@username</div>
+      <button class="follow14" id="follow_btn">(+) Follow</button>
+      <div class="following-page-child12"></div>
+      
+      <div class="profile-name14">PROFILE NAME</div>
+      <div class="username14">@username</div>
+      <button class="follow15" id="follow_btn">(+) Follow</button>
+
 
     </div>
-    <!--SIDEBAR MENU-->
-
-    <!--feed (user header and follow structure)--> 
-    <div class="feed">
-
-        <div class="feed-container" id="user__structureContainer">
-
-            <div class="user__content">
-                <div class="arrow-back">
-
-                    <a href="timeline.html">
-                        <span class="material-symbols-outlined">
-                        arrow_back
-                        </span>
-                    </a>
-                </div>
-    
-                <div class="follow__body" id="user__body">
-                    
-                    <div class="follow__header" id="user__header">
-                        <div id="user__headerText">
-                            <h3>User Name
-                                <!-- <p class="follow__headerSpecial" id="user__headerSpecial">@username</p> -->
-                            </h3>
-                                            
-                        </div>
-                    </div>
-                </div>  
-            
-            </div>
-            
-            <div id="accounts-followed-container">
-                <div id="accounts-followed">
-                    Accounts Followed
-                </div>
-            </div>
-            
-        </div>
-            
-        <!--END OF FOLLOWING PAGE HEADER-->
-
-        <!--FOLLOWING PAGE CONTENT-->
-        
-        <div class="follow__structure">
-
-            <!-- FOLLOWING PROFILE SNIPPET -->
-            <div class="follow__structureContainer"> 
-            
-                <!-- Follow avatar -->
-                <div class="follow__avatar" alt="avatar">
-                    <span class="material-symbols-outlined">
-                        account_circle
-                        </span>
-                </div>   
-        
-                <!-- Follow structure -->
-                <div class="follow__body">
-                    <div class="follow__header">
-                      
-                        <div class="follow__headerText">
-                            <h3 id="username">UserName 1</h3>
-                        </div>                                            
-
-                    </div>                                       
-                </div> 
-                <button class="follow-btn">Following</button>  
-            </div>
-        
-            <!--END OF FOLLOWING PROFILE SNIPPET-->
-
-            <!-- 2ND FOLLOWING PROFILE SNIPPET -->
-            <div class="follow__structureContainer"> 
-            
-                <!-- Follow avatar -->
-                <div class="follow__avatar" alt="avatar">
-                    <span class="material-symbols-outlined">
-                        account_circle
-                        </span>
-                </div>   
-        
-                <!-- Follow structure -->
-                <div class="follow__body">
-                    <div class="follow__header">
-                      
-                        <div class="follow__headerText">
-                            
-                            <h3 id="username">UserName 2                                         
-                                <!-- <p class="follow__headerSpecial">@username</p> --> 
-                            </h3>
-                        </div>                                            
-                        
-                        <div class="follow__headerDesc">
-                            <!-- <p>banananaananananananandfdfdfdfsds</p> -->
-                        </div>
-
-                    </div>                                       
-                </div> 
-                <button class="follow-btn">Following</button>  
-            </div>
-
-            <!-- 3RD FOLLOWING PROFILE SNIPPET -->
-            <div class="follow__structureContainer"> 
-            
-                <!-- Follow avatar -->
-                <div class="follow__avatar" alt="avatar">
-                    <span class="material-symbols-outlined">
-                        account_circle
-                        </span>
-                </div>   
-        
-                <!-- Follow structure -->
-                <div class="follow__body">
-                    <div class="follow__header">
-                      
-                        <div class="follow__headerText">
-                            
-                            <h3 id="username">UserName 3                                        
-                                <!-- <p class="follow__headerSpecial">@username</p> --> 
-                            </h3>
-                        </div>                                            
-                        
-                        <div class="follow__headerDesc">
-                            <!-- <p>banananaananananananandfdfdfdfsds</p> -->
-                        </div>
-
-                    </div>                                       
-                </div> 
-                <button class="follow-btn">Following</button>  
-            </div>
-
-        </div> <!--end of follow__structure (ung buong katawan)-->
-    </div><!-- end of feed  -->
-
-    <!--WIDGET MENU-->
-    <div class="widgets-container">
-        <div class="widget-header">
-            <h2>What's Happening</h2>
-        </div>
-        <div class="widget-text">
-            <h2>#CCISWEEK2024</h2>
-        </div>
-        <div class="widget-text">
-            <h2>#MCL@18</h2>
-        </div>
-        <div class="widget-text">
-            <h2></h2>
-        </div>
-        <div class="widget-text">
-            <h2>#SAMSUNGCOMPETITION</h2>
-        </div>
-        <div class="widget-text">
-            <h2>#Figma'sUI-UX</h2>
-        </div>
-        <div class="widget-text">
-            <h2>#CLIRBeanBag</h2>
-        </div>
-    </div>
-    <!--WIDGET MENU-->
-    <!-- test -->
-
-    
-</body>
+  </body>
 </html>
