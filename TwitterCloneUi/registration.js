@@ -1,3 +1,4 @@
+localStorage.removeItem("token");
 function regisPass() {
     const username = document.getElementById('username-regis').value;
     const password = document.getElementById('password-regis').value;
@@ -10,7 +11,7 @@ async function register(username, password) {
         "password": password
     };
     try {
-        const res = await fetch('http://localhost:3000/api/v1/auth/register', {
+        const res = await fetch('/api/v1/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

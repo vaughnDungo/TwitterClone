@@ -1,3 +1,5 @@
+localStorage.removeItem("token");
+
 async function logIn() {
     const username = document.getElementById('username-log').value;
     const password = document.getElementById('password-log').value;
