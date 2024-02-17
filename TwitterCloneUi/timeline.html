@@ -31,19 +31,18 @@
         alt=""
         src="./public/weezerlogo-1@2x.png"
       />
-      <form id="postbox">
+
+      <form id="postbox" onsubmit="event.preventDefault(); createPost(document.getElementById('input').value)">
       <div class="rectangle-div"></div>
       <input class="write-something" name="write_post" id="input" placeholder="Write something..." type="text" />
       <button class="rectangle-parent" id="post_btn" type="submit">
         <div class="group-child"></div>
         <div class="weez">Weez</div>
       </button>
-     </form>
+      </form>
 
-      
-        
-      </button>
-
+      <!-- Container for posts -->
+      <div class="timeline-page"></div>
 
       <!--nav start-->
       <div class="line-div"></div>
