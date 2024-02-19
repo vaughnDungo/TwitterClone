@@ -1,24 +1,77 @@
-
+function getCurrentUserToken(){
+  return localStorage.getItem('authToken');
+}
 async function fetchUsersToFollow() {
+  const currentUser = localStorage.getItem('currentUser');
   try {
-    const response = await fetch('http://localhost:3000/api/v1/users');
+    const response = await fetch('http://localhost:3000/api/v1/users',{
+      headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${getCurrentUserToken()}`}
+    });
+    
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const users = await response.json();
-    return users;
+    return users.filter(user => user != currentUser);
   } catch (error) {
     console.error(`Error fetching users to follow: ${error}`);
     throw error;
   }
 }
 
-// Function to follow a user
-async function followUser(username) {
-  try {
-    const authToken = sessionStorage.getItem('authToken');
+async function renderUsersToFollow(){
+  const users = await fetchUsersToFollow();
+  const usersFollowed = new Set(await getFollowedUsers()) // fetch followed user from API
 
-    const response = await fetch(`/api/follow/${username}`, {
+  const usersList = document.getElementById('suggest-users-container');
+  usersList.innerHTML = "" // remove all children
+  users.forEach(user => {
+    const listItem = document.createElement('div');
+    listItem.classList.add("following-user")
+    // if user is followed, then change button text to unfollow and s
+    const isUserFollowed = usersFollowed.has(user)
+    listItem.innerHTML = `
+          <div class="following-page-inner"></div>
+          <div class="profile-name">${user}</div>
+          <div class="username">@${user}</div>
+          <button class="follow" id="follow_btn" >${ isUserFollowed? "Unfollow" : "Follow"}</button>
+        `;
+    usersList.appendChild(listItem);
+    listItem.getElementsByClassName("follow")[0].addEventListener("click", () => {
+      // if statement
+      if (isUserFollowed){
+        unfollowUser(user);
+      }
+      else{
+        followUser(user);
+      }
+      renderUsersToFollow() // rerender
+    })
+  });
+}
+document.addEventListener('DOMContentLoaded', renderUsersToFollow);
+
+async function getFollowedUsers(){
+  const user=localStorage.getItem('currentUser');
+  const response = await fetch(`http://localhost:3000/api/v1/users/${user}/following`,{
+    headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${getCurrentUserToken()}`}
+  });
+  const followedUsers = await response.json();
+  console.log(followedUsers);
+  return followedUsers;
+}
+// Function to follow a user
+async function followUser(usernameToFollow) {
+  console.log("Following", usernameToFollow);
+  try {
+    const authToken = localStorage.getItem('authToken');
+    const follower = localStorage.getItem('currentUser');
+    // POST api/v1/users/<follower>/following/<toFollow>
+    const response = await fetch(`/api/v1/users/${follower}/following/${usernameToFollow}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -30,7 +83,7 @@ async function followUser(username) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const data = await response.json();
+    const data = await response.text();
     return data;
   } catch (error) {
     console.error(`Error following user: ${error}`);
@@ -39,11 +92,11 @@ async function followUser(username) {
 }
 
 // Function to unfollow a user
-async function unfollowUser(username) {
+async function unfollowUser(usernameToFollow) {
   try {
-    const authToken = sessionStorage.getItem('authToken');
-
-    const response = await fetch(`http://localhost:3000/api/v1/users/${username}/following`, {
+    const authToken = localStorage.getItem('authToken');
+    const follower=localStorage.getItem('currentUser');
+    const response = await fetch(`http://localhost:3000/api/v1/users/${follower}/following/${usernameToFollow}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -53,125 +106,10 @@ async function unfollowUser(username) {
     if (!response.ok) {
       throw new Error(`Unfollow request failed with status ${response.status}`);
     }
-    const data = await response.json();
+    const data = await response.text();
     return data;
   } catch (error) {
     console.error(`Error unfollowing user: ${error}`);
     throw error;
   }
 }
-// Function to unfollow a user
-async function unfollowUser(username) {
-  try {
-    const authToken = sessionStorage.getItem('authToken');
-
-    const response = await fetch(`http://localhost:3000/api/v1/users/${username}/following`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${authToken}`
-      }
-    });
-    if (!response.ok) {
-      throw new Error(`Unfollow request failed with status ${response.status}`);
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error(`Error unfollowing user: ${error}`);
-    throw error;
-  }
-}
-
-// Function to get the current user's token
-function getCurrentUserToken() {
-  return localStorage.getItem('authToken');
-}
-
-// Function to display users to follow
-function displayUsersToFollow(users) {
-  const userListContainer = document.querySelector('.following-page-item');
-  users.forEach((user) => {
-    const userContainer = document.createElement('div');
-    userContainer.textContent = user.username;
-    const followButton = document.createElement('button');
-    followButton.textContent = 'Follow';
-    followButton.onclick = function() {
-      followUser(user.username).then(() => {
-        followButton.textContent = 'Unfollow';
-        followButton.onclick = function() {
-          unfollowUser(user.username).then(() => {
-            followButton.textContent = 'Follow';
-          });
-        };
-      });
-    };
-    userContainer.appendChild(followButton);
-    userListContainer.appendChild(userContainer);
-
-    // Log the user to the console
-    console.log(user);
-  });
-}
-
-// Main function to fetch users to follow and display them
-async function showUsersToFollow() {
-  const users = await fetchUsersToFollow();
-  displayUsersToFollow(users);
-}
-
-document.addEventListener('DOMContentLoaded', showUsersToFollow);
-async function unfollowUser(username) {
-  try {
-    const response = await fetch(`http://localhost:3000/api/v1/users/${username}/following`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${getCurrentUserToken()}`
-      }
-    });
-    if (!response.ok) {
-      throw new Error(`Unfollow request failed with status ${response.status}`);
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error(`Error unfollowing user: ${error}`);
-    throw error;
-  }
-}
-
-function getCurrentUserToken() {
-  return localStorage.getItem('authToken');
-}
-
-function displayUsersToFollow(users) {
-  const userListContainer = document.querySelector('.following-page-item');
-  users.forEach((user) => {
-    const userContainer = document.createElement('div');
-    userContainer.textContent = user.username;
-    const followButton = document.createElement('button');
-    followButton.textContent = 'Follow';
-    followButton.onclick = function() {
-      followUser(user.username).then(() => {
-        followButton.textContent = 'Unfollow';
-        followButton.onclick = function() {
-          unfollowUser(user.username).then(() => {
-            followButton.textContent = 'Follow';
-          });
-        };
-      });
-    };
-    userContainer.appendChild(followButton);
-    userListContainer.appendChild(userContainer);
-
-    console.log(user);
-  });
-}
-
-async function showUsersToFollow() {
-  const users = await fetchUsersToFollow();
-  displayUsersToFollow(users);
-}
-
-document.addEventListener('DOMContentLoaded', showUsersToFollow);

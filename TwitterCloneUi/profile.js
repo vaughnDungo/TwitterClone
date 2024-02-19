@@ -1,12 +1,17 @@
 // Function to get the current user's username from localStorage
-function getCurrentUser() {
-    return localStorage.getItem('currentUser');
+function getCurrentUserToken() {
+    return localStorage.getItem('authToken');
   }
   
   // Function to fetch all posts
 async function fetchAllPosts() {
   try {
-    const response = await fetch('http://localhost:3000/api/v1/posts');
+    console.log(getCurrentUserToken());
+    const response = await fetch('http://localhost:3000/api/v1/posts',{
+      headers:{
+        'Content-Type': 'application/json',
+      'Authorization': `Bearer ${getCurrentUserToken()}`}
+      });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -26,7 +31,6 @@ async function fetchAllPosts() {
       postElement.innerHTML = `
         <h3>${post.postedBy}</h3>
         <p>${post.content}</p>
-        <p>${post.dateTimePosted}</p>
       `;
       postContainer.appendChild(postElement);
     });

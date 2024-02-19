@@ -10,10 +10,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;0,600;1,300&display=swap"
     />
-
-    <title>Weezer - Timeline</title>
-  </head>
-  <body>
     <div class="timeline-page">
       <img
         class="background-1-icon"
@@ -23,26 +19,108 @@
 
       <img class="timeline-page-child" alt="" src="./public/rectangle-2.svg" />
 
+      <div class="lorem-ipsum-dolor-container">
+        <p class="lorem-ipsum-dolor">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        </p>
+        <p class="lorem-ipsum-dolor">
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p class="lorem-ipsum-dolor">
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        </p>
+        <p class="lorem-ipsum-dolor">
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+        </p>
+        <p class="lorem-ipsum-dolor">
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </p>
+        <p class="lorem-ipsum-dolor">
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia
+        </p>
+        <p class="lorem-ipsum-dolor">deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="timeline-page-item"></div>
+      <div class="profile-name">PROFILE NAME</div>
+      <div class="username">@username</div>
+      <button class="like" id="like_btn">Like</button>
+      <div class="lorem-ipsum-dolor-container1">
+        <p class="lorem-ipsum-dolor">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        </p>
+        <p class="lorem-ipsum-dolor">
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p class="lorem-ipsum-dolor">
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        </p>
+        <p class="lorem-ipsum-dolor">
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+        </p>
+        <p class="lorem-ipsum-dolor">
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </p>
+        <p class="lorem-ipsum-dolor">
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia
+        </p>
+        <p class="lorem-ipsum-dolor">deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="timeline-page-inner"></div>
+      <div class="profile-name1">PROFILE NAME</div>
+      <div class="username1">@username</div>
+      <button class="like1" id="like_btn">Like</button>
+      <div class="lorem-ipsum-dolor-container2">
+        <p class="lorem-ipsum-dolor">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        </p>
+        <p class="lorem-ipsum-dolor">
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p class="lorem-ipsum-dolor">
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        </p>
+        <p class="lorem-ipsum-dolor">
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+        </p>
+        <p class="lorem-ipsum-dolor">
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </p>
+        <p class="lorem-ipsum-dolor">
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia
+        </p>
+        <p class="lorem-ipsum-dolor">deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="ellipse-div"></div>
+      <div class="profile-name2">PROFILE NAME</div>
+      <div class="username2">@username</div>
+      <button class="like2" id="like_btn">Like</button>
       <img class="rectangle-icon" alt="" src="./public/rectangle-1.svg" />
 
+      <div class="rectangle-div"></div>
+      <input
+        class="write-something"
+        name="write_post"
+        id="input"
+        placeholder="Write something..."
+        type="text"
+      />
 
       <img
         class="weezerlogo-1-icon"
         alt=""
         src="./public/weezerlogo-1@2x.png"
       />
-
-      <form id="postbox" onsubmit="event.preventDefault(); createPost(document.getElementById('input').value)">
-      <div class="rectangle-div"></div>
-      <input class="write-something" name="write_post" id="input" placeholder="Write something..." type="text" />
-      <button class="rectangle-parent" id="post_btn" type="submit">
+      <button class="rectangle-parent" id="post_btn" onclick="createPost()">
         <div class="group-child"></div>
         <div class="weez">Weez</div>
+        
       </button>
-      </form>
-
-      <!-- Container for posts -->
-      <div class="timeline-page"></div>
 
       <!--nav start-->
       <div class="line-div"></div>
@@ -58,7 +136,7 @@
       <button class="logout" id="logout_btn" onclick="logout()">LOGOUT</button>
 
       <!--nav end-->
-
+    </div>
      <script src="timeline.js"></script>
      <script>
       function logout() {

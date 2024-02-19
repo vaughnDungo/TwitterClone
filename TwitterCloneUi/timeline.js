@@ -1,4 +1,6 @@
-// Function to fetch all posts
+function getCurrentUserToken(){
+  return localStorage.getItem('authToken');
+}
 async function fetchAllPosts() {
   try {
     const response = await fetch('http://localhost:3000/api/v1/posts', {
@@ -20,26 +22,33 @@ async function fetchAllPosts() {
   }
 }
 
-// Function to display posts
-function displayPosts(posts) {
-  const postContainer = document.querySelector('.timeline-page');
-  posts.forEach(post => {
-    const postElement = document.createElement('div');
-    postElement.classList.add('post');
-    postElement.innerHTML = `
-      <p>${post.content}</p>
-      <p>Posted by: ${post.postedBy}</p>
-      <p>Posted at: ${post.dateTimePosted}</p>
-    `;
-    postContainer.appendChild(postElement);
-  });
+async function createPost(){
+    const authToken = localStorage.getItem('authToken');
+    const content = document.getElementById('input').value;
+    const response = await fetch('http://localhost:3000/api/v1/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${authToken}`
+      },
+      body: JSON.stringify({
+        content
+      }),
+    })
 }
 
-// Main function to fetch posts and display them
+async function displayPosts(posts){
+  const authToken = localStorage.getItem('authToken');
+  const postContainer = document.querySelector('.timeline-page');
+  const postElement = document.createElement('div');
+  const post = await fetch('http://localhost:3000/api/v1/posts', {
+    
+  })
+}
+
 async function showPosts() {
   const posts = await fetchAllPosts();
   displayPosts(posts);
 }
 
-// Call the main function when the page loads
 document.addEventListener('DOMContentLoaded', showPosts);
