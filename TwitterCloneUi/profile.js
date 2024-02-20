@@ -4,24 +4,29 @@ function getCurrentUserToken() {
   }
   
   // Function to fetch all posts
-async function fetchAllPosts() {
+// Function to fetch all posts of the current user
+async function fetchAllPosts(currentUser) {
   try {
-    console.log(getCurrentUserToken());
-    const response = await fetch('http://localhost:3000/api/v1/posts',{
-      headers:{
+    const response = await fetch('http://localhost:3000/api/v1/posts', {
+      method: "GET",
+      headers: {
         'Content-Type': 'application/json',
-      'Authorization': `Bearer ${getCurrentUserToken()}`}
-      });
+        'Authorization': `Bearer ${getCurrentUserToken()}`
+      }
+    });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const posts = await response.json();
-    return posts;
+    // Filter posts to only include those posted by the current user
+    const currentUserPosts = posts.filter(post => post.postedBy === currentUser);
+    return currentUserPosts;
   } catch (error) {
     console.error(`Fetching posts failed: ${error}`);
     throw error;
   }
 }
+
   
   // Function to display posts on the page
   function displayPosts(posts) {
@@ -36,9 +41,10 @@ async function fetchAllPosts() {
     });
   }
   
-  // Main function to get all posts and display them
+// Main function to get all posts of the current user and display them
 async function showUserPosts() {
-  const posts = await fetchAllPosts();
+  const currentUser = localStorage.getItem('currentUser'); // Get the current user's username from localStorage
+  const posts = await fetchAllPosts(currentUser); // Pass the current user's username to fetchAllPosts
   displayPosts(posts);
 }
 

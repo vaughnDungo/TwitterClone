@@ -33,7 +33,6 @@ async function renderUsersToFollow(){
     // if user is followed, then change button text to unfollow and s
     const isUserFollowed = usersFollowed.has(user)
     listItem.innerHTML = `
-          <div class="following-page-inner"></div>
           <div class="profile-name">${user}</div>
           <div class="username">@${user}</div>
           <button class="follow" id="follow_btn" >${ isUserFollowed? "Unfollow" : "Follow"}</button>
