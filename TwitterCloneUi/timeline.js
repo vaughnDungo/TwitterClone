@@ -72,11 +72,11 @@ async function showPosts() {
   const posts = await fetchAllPosts();
   displayPosts(posts);
 }
-async function likePost(postID) {
+async function toggleLikePost(postID) {
   try {
     const authToken = localStorage.getItem('authToken');
     const response = await fetch(`http://localhost:3000/api/v1/posts/${postID}`, {
-      method: 'POST',
+      method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${authToken}`
@@ -90,8 +90,9 @@ async function likePost(postID) {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error(`Error liking post: ${error}`);
+    console.error(`Error toggling like status of post: ${error}`);
     throw error;
   }
 }
+
 document.addEventListener('DOMContentLoaded', showPosts);
