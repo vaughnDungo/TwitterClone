@@ -20,8 +20,8 @@ async function fetchAllPosts() {
     }
     const allPosts = await response.json();
 
-    // Filter posts to include only those from the current user and the users they are following
-    const filteredPosts = allPosts.filter(post => post.postedBy === currentUser || followedUsers.includes(post.postedBy));
+    // Filter posts to include only those from the users that the current user is following
+    const filteredPosts = allPosts.filter(post => followedUsers.includes(post.postedBy));
 
     return filteredPosts;
   } catch (error) {
@@ -29,6 +29,7 @@ async function fetchAllPosts() {
     throw error;
   }
 }
+
 async function getFollowedUsers(){
   const user=localStorage.getItem('currentUser');
   const response = await fetch(`http://localhost:3000/api/v1/users/${user}/following`,{
@@ -56,16 +57,29 @@ async function createPost(){
 }
 
 
-async function displayPosts(posts){
-  const authToken = localStorage.getItem('authToken');
+async function displayPosts(posts) {
   const postContainer = document.querySelector('.timeline-page');
-  const postElement = document.createElement('div');
-  const response = await fetch('http://localhost:3000/api/v1/posts', {
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${authToken}`
-    }
-  })
+  posts.forEach(post => {
+    const postElement = document.createElement('div');
+    postElement.setAttribute('class', 'postElement');
+    postElement.innerHTML = `
+      <h3 class='usernamePost'>${post.postedBy}</h3>
+      <p class='contentPost'>${post.content}</p>
+      <button class="like-button" data-post-id="${post.id}">Like</button>
+    `;
+    postContainer.appendChild(postElement);
+
+    // Attach event listener to the like button
+    const likeButton = postElement.querySelector('.like-button');
+    likeButton.addEventListener('click', async () => {
+      try {
+        await toggleLikePost(post.id);
+        // Optionally update the button text or style to indicate the like status
+      } catch (error) {
+        console.error(`Error toggling like status of post: ${error}`);
+      }
+    });
+  });
 }
 
 async function showPosts() {
