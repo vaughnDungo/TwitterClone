@@ -9,31 +9,46 @@
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600&display=swap"
+
     />
 
   <title>Weezer - Profile</title>
   </head>
   <body>
     <div class="profile-page">
-      <img
+      
+      <!-- <img
         class="background-1-icon"
         alt=""
         src="./public/background-1@2x.png"
-      />
+      /> -->
 
-      <img class="profile-page-child" alt="" src="./public/rectangle-2.svg" />
+      <!-- <img class="profile-page-child" alt="" src="./public/rectangle-2.svg" /> -->
+      <div class="leftContainer">
+        <img class="profile-page-item" alt="" src="./public/rectangle-1.svg" />
+      </div>
+      <div class="rightContainer">
+        <div class="coverPhoto">
+          <div class="profilePhoto"></div>
+        </div>
+        <div class="content">
+          
+        </div>
+      </div>
 
-      <img class="profile-page-item" alt="" src="./public/rectangle-1.svg" />
-
-      <div class="profile-page-inner"></div>
-      <div class="ellipse-div"></div>
+      
+      <!-- <div class="profile-page-inner"></div> -->
+      <!-- <div class="ellipse-div"></div> -->
       <img
         class="weezerlogo-1-icon"
         alt=""
         src="./public/weezerlogo-1@2x.png"
       />
+      <div class="like"></div>
+      <div class="like1"></div>
+      <div class="like2"></div>
 
-      <div id="post-container"></div>
+      
 
       <!--NAV-->
       <button class="home" id="home_btn">HOME</button>
@@ -47,6 +62,7 @@
 
       <button class="logout" id="logout_btn" onclick="logout()">LOGOUT</button>
       <script src="profile.js"></script>
+
       <script>
         function logout() {
         localStorage.removeItem('authToken');

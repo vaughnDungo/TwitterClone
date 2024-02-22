@@ -1,8 +1,95 @@
-.background-1-icon {
+h3{
+  display: block;
+    font-size: 2em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.profile-page {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.leftContainer {
+  background-color: #b25ccc;
+  width: 450px;
+  height: 100%;
+}
+
+.rightContainer {
+  background-color: rgb(57, 57, 57);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coverPhoto {
+  position: relative;
+  background-color: #656265;
+  height: 290px;
+  width: calc(100% - 80px);
+  margin: 40px;
+  border-radius: 50px;
+}
+
+.profilePhoto {
   position: absolute;
-  top: 0;
-  left: -11px;
-  width: 2038px;
+  background-color: rgb(255, 255, 255);
+  height: 220px;
+  width: 220px;
+  border-radius: 100%;
+  bottom: -150px;
+  left: 50px;
+}
+
+.content {
+  /* background-color: green; */
+  height: fit-content;
+  width: calc(100% - 80px);
+  margin: 40px;
+  margin-top: 140px;
+}
+
+.postElement {
+  background-color: #e095ca;
+  width: 100%;
+  border-radius: 50px;
+  height: 90px;
+  margin: 10px;
+}
+
+.usernamePost {
+  transform: translateX(30px);
+}
+
+.contentPost {
+  transform: translateX(30px);
+}
+/* 
+.background-1-icon {
+  z-index: 0;
+} */
+
+
+
+.background-1-icon {
+  display: none;
+  position: absolute;
+  width: 1;
   height: 2051px;
   object-fit: cover;
 }
@@ -10,7 +97,7 @@
 .profile-page-inner,
 .profile-page-item {
   position: absolute;
-  top: 27px;
+  top: 40px;
   left: 368px;
   border-radius: var(--br-6xl);
   width: 1048px;
@@ -23,6 +110,7 @@
   width: 239px;
   height: 344px;
 }
+
 .profile-page-inner {
   top: 66px;
   left: 398px;
@@ -47,19 +135,11 @@
   height: 201px;
   object-fit: cover;
 }
-.lorem-ipsum-dolor {
-  margin: 0;
-}
-.lorem-ipsum-dolor-container {
-  position: absolute;
-  top: 644px;
-  left: 604px;
-  font-weight: 200;
-}
+
 .profile-name,
 .username {
   position: absolute;
-  left: 637px;
+  left: 1000px;
 }
 .profile-name {
   top: 365px;
@@ -69,7 +149,7 @@
   width: 227px;
 }
 .username {
-  top: 407px;
+  top: 500px;
   font-size: var(--font-size-xl);
   font-weight: 100;
 }
@@ -84,8 +164,8 @@
 }
 .profile-name1,
 .username1 {
-  position: absolute;
-  top: 619px;
+  position: relative;
+  top: 1000px;
 }
 .profile-name1 {
   left: 604px;
@@ -94,16 +174,7 @@
   display: inline-block;
   width: 227px;
 }
-.username1 {
-  left: 708px;
-  font-weight: 100;
-}
-.lorem-ipsum-dolor-container1 {
-  position: absolute;
-  top: 841px;
-  left: 604px;
-  font-weight: 200;
-}
+
 .profile-page-child2 {
   position: absolute;
   top: 792px;
@@ -113,25 +184,8 @@
   width: 73px;
   height: 69px;
 }
-.profile-name2,
-.profile-name3 {
-  position: absolute;
-  top: 816px;
-  left: 604px;
-  font-size: var(--font-size-sm);
-  font-weight: 500;
-  display: inline-block;
-  width: 227px;
-}
-.profile-name3 {
-  top: 1037px;
-}
-.username2 {
-  position: absolute;
-  top: 816px;
-  left: 708px;
-  font-weight: 100;
-}
+
+
 .line-div {
   position: absolute;
   top: 540.5px;
@@ -206,12 +260,7 @@
 .like1 {
   top: 856px;
 }
-.lorem-ipsum-dolor-container2 {
-  position: absolute;
-  top: 1062px;
-  left: 604px;
-  font-weight: 200;
-}
+
 .profile-page-child3 {
   position: absolute;
   top: 1013px;
@@ -221,12 +270,7 @@
   width: 73px;
   height: 69px;
 }
-.username3 {
-  position: absolute;
-  top: 1037px;
-  left: 708px;
-  font-weight: 100;
-}
+
 .like2,
 .profile-name4 {
   position: absolute;
@@ -245,19 +289,7 @@
   color: var(--color-black);
   text-align: center;
 }
-.profile-name4 {
-  top: 1258px;
-  left: 604px;
-  font-size: var(--font-size-sm);
-  font-weight: 500;
-  width: 227px;
-}
-.lorem-ipsum-dolor-container3 {
-  position: absolute;
-  top: 1283px;
-  left: 604px;
-  font-weight: 200;
-}
+
 .profile-page-child4 {
   position: absolute;
   top: 1234px;
@@ -267,12 +299,7 @@
   width: 73px;
   height: 69px;
 }
-.username4 {
-  position: absolute;
-  top: 1258px;
-  left: 708px;
-  font-weight: 100;
-}
+
 .like3,
 .profile-name5 {
   position: absolute;
@@ -291,19 +318,7 @@
   color: var(--color-black);
   text-align: center;
 }
-.profile-name5 {
-  top: 1479px;
-  left: 604px;
-  font-size: var(--font-size-sm);
-  font-weight: 500;
-  width: 227px;
-}
-.lorem-ipsum-dolor-container4 {
-  position: absolute;
-  top: 1504px;
-  left: 604px;
-  font-weight: 200;
-}
+
 .profile-page-child5 {
   position: absolute;
   top: 1455px;
@@ -386,7 +401,7 @@
 .profile-page {
   width: 100%;
   position: relative;
-  background-color: #fff;
+  /* background-color: #fff; */
   height: 2051px;
   overflow: hidden;
   text-align: left;

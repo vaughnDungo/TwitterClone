@@ -30,12 +30,13 @@ async function fetchAllPosts(currentUser) {
   
   // Function to display posts on the page
   function displayPosts(posts) {
-    const postContainer = document.querySelector('.profile-page-inner');
+    const postContainer = document.querySelector('.content');
     posts.forEach(post => {
       const postElement = document.createElement('div');
+      postElement.setAttribute('class', 'postElement');
       postElement.innerHTML = `
-        <h3>${post.postedBy}</h3>
-        <p>${post.content}</p>
+        <h3 class='usernamePost'>${post.postedBy}</h3>
+        <p class='contentPost'>${post.content}</p>
       `;
       postContainer.appendChild(postElement);
     });
