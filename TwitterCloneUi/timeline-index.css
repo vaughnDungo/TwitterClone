@@ -17,6 +17,10 @@
     height: 1991px;
   }
 
+ .secondContainer .postElement {
+   margin-top:  20px; /* Adjust as needed */
+   /* Add any other styles you need for the posts */
+ }
  .postElement{
   height: fit-content;
   width: calc(100% - 80px);

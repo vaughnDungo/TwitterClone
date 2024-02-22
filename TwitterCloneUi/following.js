@@ -60,7 +60,6 @@ async function getFollowedUsers(){
     'Authorization': `Bearer ${getCurrentUserToken()}`}
   });
   const followedUsers = await response.json();
-  console.log(followedUsers);
   return followedUsers;
 }
 // Function to follow a user

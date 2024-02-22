@@ -38,7 +38,6 @@ async function getFollowedUsers(){
     'Authorization': `Bearer ${getCurrentUserToken()}`}
   });
   const followedUsers = await response.json();
-  console.log(followedUsers);
   return followedUsers;
 }
 async function createPost(){
@@ -58,14 +57,16 @@ async function createPost(){
 
 
 async function displayPosts(posts) {
-  const postContainer = document.querySelector('.timeline-page');
+  const postContainer = document.querySelector('.secondContainer');
   posts.forEach(post => {
     const postElement = document.createElement('div');
     postElement.setAttribute('class', 'postElement');
+    const currentUser = localStorage.getItem('currentUser');
+    const likeButtonText = post.likes.includes(currentUser) ? 'Unlike' : 'Like';
     postElement.innerHTML = `
       <h3 class='usernamePost'>${post.postedBy}</h3>
       <p class='contentPost'>${post.content}</p>
-      <button class="like-button" data-post-id="${post.id}">Like</button>
+      <button class="like-button" data-post-id="${post.postId}">${likeButtonText}</button>
     `;
     postContainer.appendChild(postElement);
 
@@ -73,8 +74,7 @@ async function displayPosts(posts) {
     const likeButton = postElement.querySelector('.like-button');
     likeButton.addEventListener('click', async () => {
       try {
-        await toggleLikePost(post.id);
-        // Optionally update the button text or style to indicate the like status
+        await toggleLikePost(post.postId);
       } catch (error) {
         console.error(`Error toggling like status of post: ${error}`);
       }
@@ -86,23 +86,32 @@ async function showPosts() {
   const posts = await fetchAllPosts();
   displayPosts(posts);
 }
-async function toggleLikePost(postID) {
+async function toggleLikePost(postId) {
   try {
     const authToken = localStorage.getItem('authToken');
-    const response = await fetch(`http://localhost:3000/api/v1/posts/${postID}`, {
+    const currentUser = localStorage.getItem('currentUser');
+    const response = await fetch(`/api/v1/posts/${postId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${authToken}`
-      }
+      },
+      body: JSON.stringify({ action: 'toggleLike', user: currentUser })
     });
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const data = await response.json();
-    return data;
+    const updatedPost = await response.json();
+    // Update the like button text based on the updated 'likes' array
+    const likeButton = document.querySelector(`.like-button[data-post-id="${postId}"]`);
+    if (updatedPost.likes.includes(currentUser)) {
+      likeButton.textContent = 'Unlike';
+    } else {
+      likeButton.textContent = 'Like';
+    }
+    return updatedPost;
   } catch (error) {
     console.error(`Error toggling like status of post: ${error}`);
     throw error;
